@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+              animate file 
+        </title>
+        <link rel="stylesheet" href="animate.css">
+    </head>
+    <body>
+        <button id="btn"> animate</button>
+        <button id="btn2">toggle</button>
+        <button id="btn3">chaining</button>
+        <div id="div1">
+            <p>this is the first paragraph</p>
+            <p>this is the second paragraph</p>
+            <p>this is the third paragraph</p>
+        </div>
+      <div id="division">
+          <p>square</p>
+      </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+         $("#btn").click(function(){
+                $("#division").animate({
+              right:'200px',
+              opacity:'1',
+              height:'100px',
+              width:'100'
+            //alert("aagya");
+           },1000)
+         });
+        $("#btn2").click(function(){
+        $("#div1").slideToggle(1000,function()
+        {
+            alert("ho gya");
+        });
+        });
+        $("#btn3").click(function(){
+        $("#div1").slideUp(2000).slideDown(1000).fadeOut(1000);
+        });
+        
+        });
+
+    </script>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>zoom</title>
+        <script type="text/javascript">
+        var intervalid=0;
+        var difference=2;
+        var width=600;
+        function increase()
+        {
+            intervalid=setInterval(zoomin,100);
+        }
+        function decrease()
+        {
+            intervalid=setInterval(zoomout,100);
+        }
+        function zoomin()
+        {
+            if(width<700)
+            {
+                width=width+difference;
+                var img=document.getElementById("img").style.width=width;
+            }    
+            else
+            {
+                clearInterval(intervalid);
+            }
+        }
+        function zoomout()
+        {
+            if(width>600)
+            {
+                width=width-difference;
+                var img=document.getElementById("img").style.width=width;
+            }    
+            else
+            {
+                clearInterval(intervalid);
+            }
+        }
+        
+        </script>
+    </head>
+    <body>
+        <img src="forest-bike-bulls-100582.jpg" id="img" onmouseover="increase()" onmouseout="decrease()" 
+        length="400" width="600"></img>
+    </body>
+</html>

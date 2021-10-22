@@ -1,0 +1,35 @@
+<html>
+    <title></title>
+    <head>
+        <link rel="stylesheet" href="accordion.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>meri aatma gatha</h2>
+        <div id="div1">
+            <h3>mera naam prince hai</h3>
+            <p> mein sota huin khata huin or fir sojata huin</p>
+
+            <h3> meri zindagi chl rhi hai</h3>
+            <p> pta nhi kya hoga lekin jo hoga accha hoga i think so</p>
+
+            <h3> abhi mein ghar par huin</h3>
+            <p> dekhte hain kab college reopen honge bhagwan jaane hum to insaan hain</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+    <script>
+           $("#div1").accordion({
+               collapsible: true,
+               event:"click",
+               animate: 200,
+               active: 0,
+               heightStyle: true,
+               icons:{header: "ui-icon-plus",activeHeader: "ui-icon-minus"}
+           });
+
+    </script>
+</html>

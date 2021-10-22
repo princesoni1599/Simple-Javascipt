@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>timing functions</title>
+        <script type="text/javascript">
+        var ID=0;
+        var seconds=0;
+        function prnt()
+        {
+            document.getElementById("hed").innerHTML=seconds;
+            seconds++;
+        }
+        function start()
+        {
+          ID=window.setInterval(prnt , 1000);
+        }
+        function stop()
+        {
+          window.clearInterval(ID);
+        }
+        
+        </script>
+    </head>
+    <body>
+        <button onclick="start()" id="btn1"> start </button>
+        <br>
+        <h1 id="hed"> some text</h1>
+        <br>
+        <button onclick="stop()" id="btn2"> stop </button>
+    </body>
+</html>

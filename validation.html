@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title> regular expression</title>
+    <script type="text/javascript">
+        function btn()
+        {
+            var username= document.getElementById("username").value;
+            var user=document.getElementById("username");
+            var rtx=/E00/;
+            if(rtx.test(username))
+            {
+                alert("valid");
+            }
+            else
+            {
+                alert("invalid");
+                user.style.border="solid 3px green";
+                document.getElementById("lbl").style.visibility="visible";
+            }
+        }
+
+
+    </script>
+</head>
+<body>  
+    <form action="message.html">
+    <input id="username" placeholder="username"/>
+    <label id="lbl" style="color:red; visibility: hidden">invalid</label>
+    <br><br>
+    <button id="btn()" onclick="btn()" type="button" >submit</button>
+
+    </form>
+</body>
+
+</html>

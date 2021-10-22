@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            my title
+        </title>
+        <script type="text/javascript">
+        function validate()
+        {
+            var username = document.getElementById("text");
+            var password = document.getElementById("password");
+            if(username.value.trim()=="")
+            {
+                // alert("username is blank");
+                username.style.border="solid 3px red";
+                document.getElementById("lbl").style.visibility="visible";
+                return false;
+            }
+            else if(password.value.trim()=="")
+            { 
+                password.style.border="solid 3px red";
+                document.getElementById("lbl2").style.visibility="visible";
+                return false;
+            }
+            // else if(username.value.trim()==""&&password.value.trim()=="")
+            // {
+            //     alert("both field is blank");
+            //     return false;
+            // }
+            else if(password.value.trim().length<5)
+            {
+                alert("less than five is not allowed");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        
+         </script>
+    </head>
+    <body>
+     <form onsubmit="return validate()" action="message.html">
+         <input id="text" placeholder="username"/>
+         <label id="lbl" style="color:red; visibility:hidden">invalid</label>
+         <br><br>
+         <input id="password" type="password" placeholder="password"/>
+         <label id="lbl2" style="color:green ; visibility:hidden">invalid</label>
+         <br><br>
+         <button id="btn1" type="submit">submit</button>
+     </form>
+    <br>
+    </body>
+</html>

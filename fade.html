@@ -1,0 +1,56 @@
+<html>
+    <title> fade in fade out</title>
+    <head>
+        <script type="text/javascript">
+            var opacity=0;
+            var intervalid=0;
+            function fadein()
+            {
+                intervalid= setInterval(show,1000);
+            }
+            function fadeout()
+            {
+                intervalid= setInterval(hide,1000);
+            }
+            function hide()
+            {
+              var img=document.getElementById("img");
+              opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+              if(opacity>0)
+              {
+                  opacity=opacity-0.1;
+                  img.style.opacity=opacity;
+
+              }
+              else
+              {
+                  clearInterval(intervalid);
+              }
+
+            }
+            function show()
+            {
+                var img=document.getElementById("img");
+              opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+              if(opacity<1)
+              {
+                  opacity=opacity+0.1;
+                  img.style.opacity=opacity;
+
+              }
+              else
+              {
+                  clearInterval(intervalid);
+              }
+            }
+
+        </script>
+    </head>
+    <body>
+       <button onclick="fadein()"> fade in</button>
+       <br><br>
+       <img src="forest-bike-bulls-100582.jpg" length="400" width="600" id="img"> </img>
+       <br><br>
+       <button onclick="fadeout()"> fade out</button>
+    </body>
+</html>

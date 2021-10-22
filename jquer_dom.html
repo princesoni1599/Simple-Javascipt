@@ -1,0 +1,42 @@
+<html>
+    <titlt></titlt>
+    <head>
+        <link rel="stylesheet" href="jquery_dom.css">
+    </head>
+    <body>
+        <button id="btn1">append</button>
+        <button id="btn2">after</button>
+        <button id="btn3">prepend</button>
+        <button id="btn4">before</button>
+        <button id="btn5">remove</button>
+        <button id="btn6">empty</button>
+        <h2>tum meri jaan ho</h2>
+        <div id="div1">
+            <p id="para">this is my para</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+           $("#div1").append("<p>adding para<p/>")
+        });
+        $("#btn2").click(function(){
+            $("#div1").after("<p>adding para<p/>")
+        });
+        $("#btn3").click(function(){
+            $("#div1").prepend("<p>adding para<p/>")
+        });
+        $("#btn4").click(function(){
+            $("#div1").before("<p>adding para<p/>")
+        });
+        $("#btn5").click(function(){
+            $("#div1").remove(p)
+        });
+        $("#btn6").click(function(){
+            $("#para").empty()
+        });
+    
+    });
+    </script>
+</html>

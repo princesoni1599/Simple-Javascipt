@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="h"> some text</h1>
+        <div class="para">
+            <p>paragraph 2</p>
+        </div>
+          <div class="para">
+              <p> paragraph 3</p>
+          </div>
+          <div class="para">
+            <ul>
+                <li>coffee</li> 
+                <li>tea</li>
+                <li>mango shake</li>
+                <li>banana shake</li>
+                <li>cold drink</li>
+            </ul>
+          </div>
+        <button id="btn">click me</button>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // $("button").click(fn1);
+            $("#btn").mouseenter(fn1);
+            $("#btn").mouseleave(fn2);
+           // $("#btn").hover(fn1,fn2);
+            function fn1()
+            {
+                $("#h").fadeouts();
+            }
+            function fn2()
+            {
+                $("#h").fadein();
+            }
+        });
+    </script>
+</html>
